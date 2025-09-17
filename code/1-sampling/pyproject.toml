@@ -1,0 +1,18 @@
+[project]
+name = "sampling"
+version = "0.1.0"
+description = "Demonstration of sampling with MCP"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aioconsole>=0.8.1",
+    "anthropic>=0.53.0",
+    "mcp[cli]>=1.9.3",
+]
+
+[tool.setuptools]
+py-modules = ["client", "server"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
