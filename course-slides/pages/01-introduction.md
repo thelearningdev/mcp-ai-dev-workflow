@@ -14,7 +14,7 @@ title: Introduction to MCP
 
 ---
 layout: blue-sidebar
-title: How LLMs work?
+title: Why MCP?
 ---
 
 ::header::
@@ -28,7 +28,6 @@ Life before MCP
 
 ---
 title: What MCP Provides?
-hideInToc: true
 layout: blue-sidebar
 ---
 
@@ -36,20 +35,36 @@ layout: blue-sidebar
 
 # What MCP Provides?
 
+- For agents
+- For agent developers
+
 ::content::
 
 <v-clicks>
 
-1. Abstraction
-2. Dynamism
-3. Low-Coupling
-4. Clean-interface
+**1. Abstraction**
+    - Given that the Agent doesn't have about how the job is done
+
+**2. Dynamism**
+    - We can add new functionality to agent without ever touching their code
+
+**3. Low-Coupling**
+    - We don't have to worry about integration implementation
+
+**4. Clean-interface**
+    - USB-Plug and play + JSON input/output is a huge win
 
 </v-clicks>
 
+<!--
+Developers love abstraction
+Developers hate coupling
+MxN model you are touching Agent code everytime you have to add a functionality to it
+USB-C plug and play
+-->
+
 ---
 title: MCP Architecture
-hideInToc: true
 layout: blue-sidebar
 ---
 
@@ -71,29 +86,7 @@ A component that maintains a connection to an MCP server and obtains context fro
 ![alt text](../assets/mcp-architecture.png)
 
 ---
-title: MCP Layers of Communication
-hideInToc: true
-layout: blue-sidebar
+layout: blue-title-slide
 ---
 
-::header::
-
-## MCP Layers of Communication
-
-::content::
-
-<v-clicks>
-
-- **Data layer**: 
-  - JSON-RPC based protocol for client-server communication 
-  - lifecycle management
-  - tools, resources, prompts, notifications.
-
-- **Transport layer**: 
-  - Network transport-specific details
-  - Connection establishment
-  - Message framing 
-  - Authorization.
-
-</v-clicks>
-
+# Demo

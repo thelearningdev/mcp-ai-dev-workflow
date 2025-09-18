@@ -5,9 +5,35 @@ layout: blue-title-slide
 # MCP Primitives
 
 ---
-title: MCP Primitives
-hideInToc: true
+title: MCP Layers of Communication
 layout: blue-sidebar
+---
+
+::header::
+
+## MCP Layers of Communication
+
+::content::
+
+<v-clicks>
+
+- **Data layer**: 
+  - JSON-RPC based protocol for client-server communication 
+  - lifecycle management
+  - tools, resources, prompts, notifications.
+
+- **Transport layer**: 
+  - Network transport-specific details
+  - Connection establishment
+  - Message framing 
+  - Authorization.
+
+</v-clicks>
+
+---
+title: MCP Primitives
+layout: blue-sidebar
+hideInToc: true
 ---
 
 ::header::
@@ -51,6 +77,7 @@ layout: blue-sidebar
 
 ---
 layout: blue-sidebar
+hideInToc: true
 ---
 
 ::header::
@@ -68,6 +95,7 @@ layout: blue-sidebar
 
 ---
 layout: blue-sidebar
+hideInToc: true
 ---
 
 ::header::
@@ -85,6 +113,7 @@ layout: blue-sidebar
 
 ---
 layout: blue-sidebar
+hideInToc: true
 ---
 
 ::header::
@@ -101,6 +130,7 @@ layout: blue-sidebar
 
 ---
 layout: blue-sidebar
+hideInToc: true
 ---
 
 ::header::

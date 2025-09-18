@@ -1,7 +1,7 @@
 from mcp.server.fastmcp import FastMCP, Context
 from mcp.types import SamplingMessage, TextContent
 
-mcp = FastMCP(name="Demo Server")
+mcp = FastMCP(name="1-sampling-server")
 
 
 @mcp.tool()

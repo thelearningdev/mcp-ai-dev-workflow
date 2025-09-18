@@ -12,10 +12,18 @@ themeConfig:
 css: unocss
 background: '#0a2a87'
 theme: thelearningdev
+hideInToc: true
 ---
 
 # Model Context Protocol
 
+<!--
+How many of you alreay know about model context protocol?
+
+
+
+Depending on that we move through these slides rather quickly
+-->
 
 ---
 src: ./pages/toc.md
@@ -38,7 +46,7 @@ hide: false
 ---
 
 ---
-src: ./pages/04-mcp-security-best-practices.md
+src: ./pages/04-mcp-best-practices.md
 hide: false
 ---
 

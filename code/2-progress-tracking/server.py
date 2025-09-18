@@ -1,7 +1,7 @@
 from mcp.server.fastmcp import FastMCP, Context
 import asyncio
 
-mcp = FastMCP(name="Demo Server")
+mcp = FastMCP(name="2-progress-server")
 
 
 @mcp.tool()
