@@ -1,10 +1,9 @@
 # server.py
 
-from fastapi import FastAPI, Request, Depends, HTTPException, Header
+from fastapi import FastAPI, Request, Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Optional
 from datetime import datetime, timedelta
 import jwt
 import json
@@ -15,9 +14,7 @@ app = FastAPI()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # In-memory DBs (for demo purposes)
-user_db = {
-    "user1": {"password": "pass1", "locations": ["New York", "Paris"]}
-}
+user_db = {"user1": {"password": "pass1", "locations": ["New York", "Paris"]}}
 context_store = {}
 SECRET_KEY = "supersecretjwtkey"
 FERNET_KEY = Fernet.generate_key()
@@ -41,9 +38,11 @@ class LoginRequest(BaseModel):
     username: str
     password: str
 
+
 class WeatherQuery(BaseModel):
     location: str
     input: str  # Simulated user input for model
+
 
 class WeatherResponse(BaseModel):
     response: str
@@ -51,11 +50,9 @@ class WeatherResponse(BaseModel):
 
 # === Auth ===
 def create_token(username: str):
-    payload = {
-        "sub": username,
-        "exp": datetime.utcnow() + timedelta(minutes=30)
-    }
+    payload = {"sub": username, "exp": datetime.utcnow() + timedelta(minutes=30)}
     return jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+
 
 def verify_token(token: str = Depends(oauth2_scheme)):
     try:
@@ -77,6 +74,7 @@ def load_context(username: str):
         return json.loads(fernet.decrypt(encrypted).decode())
     return {}
 
+
 def save_context(username: str, context: dict):
     encrypted = fernet.encrypt(json.dumps(context).encode())
     context_store[username] = encrypted
@@ -88,6 +86,7 @@ def run_weather_tool(location: str):
     if location not in ["New York", "Paris", "London"]:
         raise ValueError("Invalid location.")
     return f"The weather in {location} this weekend is sunny and 22°C."
+
 
 def run_model(user_input: str, context: dict):
     # Simulated model with memory/context usage
@@ -137,5 +136,7 @@ def get_weather(query: WeatherQuery, username: str = Depends(verify_token)):
 async def audit_logging(request: Request, call_next):
     user = request.headers.get("Authorization", "unknown").replace("Bearer ", "")
     timestamp = datetime.utcnow().isoformat()
-    logging.info(f"[AUDIT] Time: {timestamp}, User Token: {user}, Path: {request.url.path}")
+    logging.info(
+        f"[AUDIT] Time: {timestamp}, User Token: {user}, Path: {request.url.path}"
+    )
     return await call_next(request)

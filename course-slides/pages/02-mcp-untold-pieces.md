@@ -44,6 +44,7 @@ hideInToc: true
 
 <v-clicks>
 
+- **Notifications**
 - **Server**
   - Tools
   - Resources
@@ -52,7 +53,7 @@ hideInToc: true
   - Sampling
   - Roots
   - Elicitation
-- **Notifications**
+
 
 </v-clicks>
 

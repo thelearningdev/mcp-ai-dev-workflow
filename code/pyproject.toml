@@ -7,7 +7,9 @@ requires-python = ">=3.10"
 dependencies = [
     "aioconsole>=0.8.1",
     "anthropic>=0.53.0",
+    "fastmcp>=2.12.3",
     "mcp[cli]>=1.9.3",
+    "ruff>=0.13.0",
 ]
 
 [tool.setuptools]

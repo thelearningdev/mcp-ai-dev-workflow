@@ -24,16 +24,12 @@ async def chat(input_messages: list[SamplingMessage], max_tokens=4000):
     for msg in input_messages:
         if msg.role == "user" and msg.content.type == "text":
             content = (
-                msg.content.text
-                if hasattr(msg.content, "text")
-                else str(msg.content)
+                msg.content.text if hasattr(msg.content, "text") else str(msg.content)
             )
             messages.append({"role": "user", "content": content})
         elif msg.role == "assistant" and msg.content.type == "text":
             content = (
-                msg.content.text
-                if hasattr(msg.content, "text")
-                else str(msg.content)
+                msg.content.text if hasattr(msg.content, "text") else str(msg.content)
             )
             messages.append({"role": "assistant", "content": content})
 

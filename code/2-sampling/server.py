@@ -13,9 +13,7 @@ async def summarize(text_to_summarize: str, ctx: Context):
 
     result = await ctx.session.create_message(
         messages=[
-            SamplingMessage(
-                role="user", content=TextContent(type="text", text=prompt)
-            )
+            SamplingMessage(role="user", content=TextContent(type="text", text=prompt))
         ],
         max_tokens=4000,
         system_prompt="You are a helpful research assistant.",
