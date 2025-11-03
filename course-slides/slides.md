@@ -19,6 +19,12 @@ hideInToc: true
 
 # Model Context Protocol
 
+
+<span>
+Bhavani Ravi<br/>
+Founder, TheLearningDev
+</span>
+
 ---
 hide: false
 src: ./pages/toc.md
@@ -39,9 +45,11 @@ hide: false
 ---
 
 ---
-src: ./pages/04-mcp-best-practices.md
-hide: false
+layout: blue-title-slide
+hideInToc: true
 ---
+
+# MCP + Dev Workflow
 
 ---
 layout: blue-title-slide
