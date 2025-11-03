@@ -9,7 +9,7 @@ current_path = __file__.rsplit("/", 1)[0]
 
 server_params = StdioServerParameters(
     command="uv",
-    args=["run", f"{current_path}/server.py"],
+    args=["run", f"{current_path}/stdio_server.py"],
 )
 
 
