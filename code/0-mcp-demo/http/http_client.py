@@ -1,21 +1,18 @@
 import asyncio
-from mcp import ClientSession, StdioServerParameters
-from mcp.client.stdio import stdio_client
+from mcp import ClientSession
+from mcp.client.streamable_http import streamablehttp_client
 
 # No LLMs are harmed in this example
 # We are just understanding client/server architecture
 
-server_params = StdioServerParameters(
-    command="uv",
-    args=["run", "server.py"],
-)
-
 
 async def run():
-    async with stdio_client(server_params) as (read, write):
+    async with streamablehttp_client(
+        url="http://127.0.0.1:8000/mcp",
+    ) as (read, write, _):
         async with ClientSession(read, write) as session:
             await session.initialize()
-
+            print (await session.list_tools())
             result = await session.call_tool(
                 name="get_weather",
                 arguments={"city": "sf"},

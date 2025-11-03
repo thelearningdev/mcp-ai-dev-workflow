@@ -7,34 +7,27 @@ drawings:
 transition: slide-left
 mdc: true
 themeConfig:
+  text-align: center
   primary: '#0a2a87'
   secondary: '#7fc1ff'
-css: unocss
 background: '#0a2a87'
 theme: thelearningdev
 hideInToc: true
+
+
 ---
 
 # Model Context Protocol
 
-<!--
-How many of you alreay know about model context protocol?
-
-
-
-Depending on that we move through these slides rather quickly
--->
-
 ---
+hide: false
 src: ./pages/toc.md
-hide: false
 ---
 
 ---
+hide: false
 src: ./pages/01-introduction.md
-hide: false
 ---
-
 ---
 src: ./pages/02-mcp-untold-pieces.md
 hide: false

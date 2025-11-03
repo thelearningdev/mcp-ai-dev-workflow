@@ -5,32 +5,6 @@ layout: blue-title-slide
 # MCP Primitives
 
 ---
-title: MCP Layers of Communication
-layout: blue-sidebar
----
-
-::header::
-
-## MCP Layers of Communication
-
-::content::
-
-<v-clicks>
-
-- **Data layer**: 
-  - JSON-RPC based protocol for client-server communication 
-  - lifecycle management
-  - tools, resources, prompts, notifications.
-
-- **Transport layer**: 
-  - Network transport-specific details
-  - Connection establishment
-  - Message framing 
-  - Authorization.
-
-</v-clicks>
-
----
 title: MCP Primitives
 layout: blue-sidebar
 hideInToc: true
@@ -53,7 +27,6 @@ hideInToc: true
   - Sampling
   - Roots
   - Elicitation
-
 
 </v-clicks>
 
@@ -95,52 +68,7 @@ hideInToc: true
 
 
 ---
-layout: blue-sidebar
-hideInToc: true
+layout: blue-title-slide
 ---
 
-::header::
-
-## Sampling
-
-::content::
-
-- Server makes the request back to client to use the LLM
-- Server doesn't have to make decisions for client's preferences
-- Eg., Research MCP server, some users might like short answers, some like detailed reports with references
-
-![](../assets/sampling-1.png)
-
-
----
-layout: blue-sidebar
-hideInToc: true
----
-
-::header::
-
-## Notifications
-
-::content::
-
-- Server progress tracking
-- Alerting on intermediate steps
-
-![](../assets/notifications.png)
-
-
----
-layout: blue-sidebar
-hideInToc: true
----
-
-::header::
-
-## Roots
-
-::content::
-
-- Grant permission to specific files
-- Client specifying a root has no meaning unless there is a server implementation to support it
-
-![](../assets/roots.png)
+## Demo

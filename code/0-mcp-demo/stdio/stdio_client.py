@@ -5,9 +5,11 @@ from mcp.client.stdio import stdio_client
 # No LLMs are harmed in this example
 # We are just understanding client/server architecture
 
+current_path = __file__.rsplit("/", 1)[0]
+
 server_params = StdioServerParameters(
     command="uv",
-    args=["run", "server.py"],
+    args=["run", f"{current_path}/server.py"],
 )
 
 

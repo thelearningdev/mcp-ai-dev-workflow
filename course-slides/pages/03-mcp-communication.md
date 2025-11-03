@@ -19,18 +19,6 @@ layout: blue-sidebar
   - Stdio
   - Streamable HTTP
 
----
-layout: blue-sidebar
----
-
-::header::
-
-## MCP Message types
-
-::content::
-
-![alt text](../assets/mcp-message-types.png)
-
 
 ---
 layout: blue-sidebar

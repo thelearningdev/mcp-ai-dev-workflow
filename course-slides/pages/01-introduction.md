@@ -1,11 +1,11 @@
 ---
 layout: blue-sidebar
-title: Introduction to MCP
+title: MCP by Anthropic
 ---
 
 ::header::
 
-# Introduction to MCP
+# MCP by Anthropic
 ::content::
 
 >The Model Context Protocol is an open standard that enables developers to build secure, two-way connections between their data sources and AI-powered tools. - Anthropic
@@ -27,41 +27,17 @@ Life before MCP
 ![alt text](../assets/before-vs-after-mcp.png)
 
 ---
-title: What MCP Provides?
 layout: blue-sidebar
+title: Why MCP?
 ---
 
 ::header::
 
-# What MCP Provides?
-
-- For agents
-- For agent developers
+# MCP world of opportunities
 
 ::content::
 
-<v-clicks>
-
-**1. Abstraction**
-    - Given that the Agent doesn't have about how the job is done
-
-**2. Dynamism**
-    - We can add new functionality to agent without ever touching their code
-
-**3. Low-Coupling**
-    - We don't have to worry about integration implementation
-
-**4. Clean-interface**
-    - USB-Plug and play + JSON input/output is a huge win
-
-</v-clicks>
-
-<!--
-Developers love abstraction
-Developers hate coupling
-MxN model you are touching Agent code everytime you have to add a functionality to it
-USB-C plug and play
--->
+![alt text](../assets/custom-why-mcp.png)
 
 ---
 title: MCP Architecture
@@ -89,4 +65,4 @@ A component that maintains a connection to an MCP server and obtains context fro
 layout: blue-title-slide
 ---
 
-# Demo
+## Demo

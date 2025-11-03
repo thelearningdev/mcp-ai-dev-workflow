@@ -11,3 +11,4 @@ wheels/
 .python-version
 .ipynb_checkpoints
 .env
+.ruff_cache
