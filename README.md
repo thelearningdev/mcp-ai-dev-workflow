@@ -103,4 +103,12 @@ npx @modelcontextprotocol/inspector \
 
 2. You need Vscode + github copilot (free version should do) for this demo
 
+3. Two ways to install MCP server `mcp.json` or MCP extensions
+
+### Demo workflow
+
+1. Create an airflow pipeline without mcp servers
+2. Highlight the disadvantages
+3. Enable MCP servers
+4. Add better instructions
 
